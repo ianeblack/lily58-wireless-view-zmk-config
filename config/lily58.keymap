@@ -14,6 +14,22 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        base {
+            bindings = <&tog 0>;
+            key-positions = <55 52>;
+            layers = <3>;
+        };
+
+        gaming {
+            bindings = <&tog 3>;
+            key-positions = <52 55>;
+            layers = <0>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -67,7 +83,7 @@
 
             display-name = "Raise";
             bindings = <
-&trans  &tog 1      &tog 2             &tog 3           &trans  &trans                    &trans         &trans                &trans                 &trans  &tog 0  &kp DELETE
+&trans  &trans      &trans             &trans           &trans  &trans                    &trans         &trans                &trans                 &trans  &trans  &kp DELETE
 &trans  &trans      &trans             &trans           &trans  &trans                    &kp BACKSLASH  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans  &trans
 &trans  &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans  &trans                    &kp MINUS      &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans  &trans  &trans
 &trans  &trans      &trans             &trans           &trans  &trans  &trans    &trans  &kp EQUAL      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans  &trans  &trans
@@ -83,7 +99,7 @@
 &kp TAB         &kp Q   &kp W   &kp E     &kp R     &kp T                          &kp Y   &kp U     &kp I      &kp O    &kp P     &kp MINUS
 &kp LEFT_SHIFT  &kp A   &kp S   &kp D     &kp F     &kp G                          &kp H   &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LCTRL       &kp Z   &kp X   &kp C     &kp V     &kp B   &kp LBKT     &kp RBKT  &kp N   &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                                &kp LALT  &kp LGUI  &mo 1   &kp SPACE    &kp RET   &mo 2   &kp RGUI  &kp RALT
+                                &kp LALT  &kp LGUI  &sl 1   &kp SPACE    &kp RET   &sl 2   &kp RGUI  &kp RALT
             >;
 
             label = "gaming";
